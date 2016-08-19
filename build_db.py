@@ -12,6 +12,7 @@ Summary:
 import os
 import sys
 import glob
+import time
 
 ###################
 # Variables
@@ -23,7 +24,7 @@ faa_files = {}      # Store faa filename and path
 #   Searches for files with file_ext for the extension, then stores their path in storage
 #   using the files name as the key, without its extension.
 #   Recursive option will look through the tree recursively
-#   NOTE: The extension should inlucde the '.'
+#   NOTE: The extension should inlucde the '.' (I considered this more intuitive)
 # Side effects:
 #   storage will be modified
 def find_files(file_ext, storage, recursive_opt, path):
@@ -44,12 +45,14 @@ def find_files(file_ext, storage, recursive_opt, path):
             filename = get_filename(f)
             storage[filename] = f
 
-# create_db string string -> 
+# create_db: string string -> 
 # Description:
 #   Creates files relevant to the database at the location specified by root_dir.
 #   These files include .pfs.dat file which will hold info needed by the program, such as
 #   paths to the other key db files, and a .csv file which will eventually hold the meta
 #   data along with path info for each of the metagenomes in the database.
+# Side effects:
+#   Files will be made at the specified directory
 def create_db(fs_root_dir, name):
 
     if not os.path.exists( os.path.abspath(fs_root_dir) ):
@@ -72,6 +75,8 @@ def create_db(fs_root_dir, name):
 
 
     # Write the fs info to the dat file
+    dat_file.write("name=\"%s\"\n" % name )
+    dat_file.write("created=\"%s\"\n" % time.strftime("%Y-%m-%d") )
     dat_file.write("fs_root=\"%s\"\n" % os.path.abspath(fs_root_dir) )
     dat_file.write("fs_dat=\"%s\"\n" % dat_abs_path )
     dat_file.write("fs_csv=\"%s\"\n" % csv_abs_path )
@@ -82,3 +87,28 @@ def create_db(fs_root_dir, name):
 
 
     return "Done"
+
+# populate_db: String ->
+def populate_db(fs_dat_file):
+
+    dat_file = open(fs_dat_file, 'r')
+
+    csv_path = get_dat_field("fs_csv", dat_file)
+
+    if csv_path == "Field not found":
+        return csv_path
+
+    csv_file = open(csv_path, 'w+')
+    csv_file.write("test")
+
+# get_dat_field: String -> String
+def get_dat_field(field, dat_file):
+    result = ""
+    for line in dat_file:
+        if line.split("=")[0] == field:
+            result = line.split("=")[1]
+            result = result.split("\n")[0]
+            result = result.split("\"")[1]
+            return result
+    return "Field not found"
+
