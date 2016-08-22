@@ -70,36 +70,27 @@ def create_db(fs_root_dir, name):
     csv_path = "%s/%s" % (fs_root_dir, csv_filename)
     csv_abs_path = os.path.abspath(csv_path)
 
-    dat_file = open(dat_abs_path, 'w+')
-    csv_file = open(csv_abs_path,  'w+')
 
-
-    # Write the fs info to the dat file
-    dat_file.write("name=\"%s\"\n" % name )
-    dat_file.write("created=\"%s\"\n" % time.strftime("%Y-%m-%d") )
-    dat_file.write("fs_root=\"%s\"\n" % os.path.abspath(fs_root_dir) )
-    dat_file.write("fs_dat=\"%s\"\n" % dat_abs_path )
-    dat_file.write("fs_csv=\"%s\"\n" % csv_abs_path )
-
-
-    dat_file.close()
-    csv_file.close()
-
+    with open(dat_abs_path, 'w+') as dat_file, open(csv_abs_path, 'w+') as csv_file:
+        # Write the fs info to the dat file
+        dat_file.write("name=\"%s\"\n" % name )
+        dat_file.write("created=\"%s\"\n" % time.strftime("%Y-%m-%d") )
+        dat_file.write("fs_root=\"%s\"\n" % os.path.abspath(fs_root_dir) )
+        dat_file.write("fs_dat=\"%s\"\n" % dat_abs_path )
+        dat_file.write("fs_csv=\"%s\"\n" % csv_abs_path )
 
     return "Done"
 
 # populate_db: String ->
 def populate_db(fs_dat_file):
 
-    dat_file = open(fs_dat_file, 'r')
+    with open(fs_dat_file, 'r') as dat_file:
+        csv_path = get_dat_field("fs_csv", dat_file)
+        if csv_path == "Field not found":
+            return csv_path
 
-    csv_path = get_dat_field("fs_csv", dat_file)
-
-    if csv_path == "Field not found":
-        return csv_path
-
-    csv_file = open(csv_path, 'w+')
-    csv_file.write("test")
+    with open(csv_path, 'w+') as csv_file:
+        csv_file.write("test")
 
 # get_dat_field: String -> String
 def get_dat_field(field, dat_file):
