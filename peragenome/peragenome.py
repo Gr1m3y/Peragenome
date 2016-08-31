@@ -1,9 +1,10 @@
+#!/usr/bin/env python
 
 """
 Peragenome
 """
 
-import csv
+import csv_handler
 
 def main():
     logging.basicConfig(filename='test/debug.log', level=logging.INFO)
