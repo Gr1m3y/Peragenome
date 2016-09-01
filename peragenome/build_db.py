@@ -13,6 +13,8 @@ import os
 import sys
 import glob
 import time
+import logging
+import csv_handler as csv
 
 ###################
 # Variables
@@ -45,7 +47,7 @@ def find_files(file_ext, storage, recursive_opt, path):
             filename = get_filename(f)
             storage[filename] = f
 
-# create_db: string string -> 
+# create_db: string string ->
 # Description:
 #   Creates files relevant to the database at the location specified by root_dir.
 #   These files include .pfs.dat file which will hold info needed by the program, such as
@@ -93,13 +95,21 @@ def populate_db(fs_dat_file):
         csv_file.write("test")
 
 # get_dat_field: String -> String
+# Summary:
+#   Returns the value for field in dat_file. dat_file should be of the format
+#   field_name=value. In this case, value is returned
 def get_dat_field(field, dat_file):
     result = ""
-    for line in dat_file:
-        if line.split("=")[0] == field:
-            result = line.split("=")[1]
-            result = result.split("\n")[0]
-            result = result.split("\"")[1]
-            return result
-    return "Field not found"
+    try:
+        for line in dat_file:
+            if line.split("=")[0] == field:
+                result = line.split("=")[1]
+                result = result.split("\n")[0]
+                result = result.split("\"")[1]
+                return result
+        raise LookupError("field not found")
+    except LookupError as err:
+            err.args += (field, dat_file,)
+            logging.warning( "get_dat_field: " + err[0] )
+            logging.warning( "The value was not read from the file" )
 

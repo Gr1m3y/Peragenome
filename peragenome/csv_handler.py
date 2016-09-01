@@ -238,14 +238,131 @@ def swap_columns_by_title(title1, title2, csv_file):
 
         title_row = csv_file.readline()
 
-        print title_row
-
+        # Get the column numbers for the passed in titles
         col1 = get_col_num(title1, title_row)
-        print col1
         col2 = get_col_num(title2, title_row)
-        print col2
+        # Call swap_by_num
         swap_columns_by_num(col1, col2, csv_file)
 
     except:
         logging.error("swap_columns_by_title: Unknown error")
         logging.error( sys.exc_info()[0] )
+
+# create_new_table: string int listOfString -> 
+# Summary:
+#   Creates a new csv file called filename.csv with ncol number of columns. If
+#   specified, titles will be inserted for the first row.
+# Constraints:
+#   - ncol >= len(titles)
+#   - ncol >= 0
+# Side Effects:
+#   New file created in the present working director (at runtime)
+# NOTE: If the number of titles does not match ncol, then any remaining columns
+#   will be left blank
+def create_new_table( filename, ncol, titles=[] ):
+    filename_ext = filename + ".csv"
+
+    try:
+        # Check that the arguments are following constraints
+        if ncol < 0:
+            raise ValueError("ncol was negative")
+        elif len(titles) > ncol:
+            raise ValueError("len(titles) was greater than ncol")
+
+        # Open and create the file
+        with open(filename_ext, 'w+') as new_csv:
+            header = "," * (ncol-1)
+            # Check if the input contained defined titles
+            if titles != []:
+                fields = header.split(",")
+
+                # Iterate over titles passed as arguments and set the correct fields
+                for i, name in enumerate(titles):
+                    fields[i] = name
+                header = ",".join(fields)   # join the titles as a single string
+
+            new_csv.seek(0) # set the cursor just in case
+            new_csv.write(header)
+
+    except ValueError as err:
+        # log details for a bad call to the function
+        err.args += (filename, ncol, titles,)
+        logging.warning("create_new_table: " + err[0] )
+        logging.warning("File not created")
+        logging.warning(err[1:])
+    except:
+        logging.error("create_new_table: Unknown error")
+        logging.error( sys.exc_info()[:2] )
+
+# get_table_dimensions: file -> (int, int)
+# Summary:
+#   Returns a tuple containing the dimensions of the table stored in csv_file
+# NOTE: The number of columns returned will always be at least 1 since an empty file
+#   is equivalent to a single column table with 0 rows.
+def get_table_dimensions(csv_file):
+    try:
+        csv_file.seek(0)        # reset the cursor
+
+        # get the number of columns
+        line = csv_file.readline()
+        cols = len( line.split(",") )   # split first line into columns and count them
+
+        csv_file.seek(0)        # reset the cursor
+        i = -1                  # initialize i to account for the possibility that the file is empty
+        # iterate over the file to count the lines to get number of rows
+        for i, line in enumerate(csv_file):
+                pass
+        rows = i+1
+
+        return rows, cols
+
+    except:
+        logging.error("get_table_dimensions: Unknown error")
+        logging.error( sys.exc_info()[:2] )
+
+# find_next_null: int int file -> (int, int)
+# Summary:
+#   Searches the CSV file from the position specified by row, col (inclusive)
+#   until an empty value is found.
+# Constraints:
+#   - row > 0
+#   - col > 0
+#   - row < get_table_dimensions(csv_file)[0]
+#   - col < get_table_dimensions(csv_file)[1]
+# NOTE: Returns the tuple (-1,-1) if no NULLS are found
+def find_next_null(row, col, csv_file):
+    try:
+        # Get the dimensions of the table
+        row_dim, col_dim = get_table_dimensions(csv_file)
+
+        # Check the constraints
+        if row >= row_dim or col >= col_dim:
+            raise ValueError("dimensions out of bounds")
+
+
+        csv_file.seek(0)
+        csv_rows = csv_file.readlines()
+
+        # iterate over lines starting from the row specified
+        for line in csv_rows[row:]:
+            fields = line.rstrip().split(",")
+
+            # iterate over the fields for the current row
+            for field in fields[col:]:
+                if field == '':
+                    return row, col
+                col += 1   # increment the col
+
+            row += 1   # increment the row
+            col = 0 # reset the col number
+        return (-1,-1)
+
+    # TODO: Should this really be an exception? Or should this just count as
+    # "no next null found"?
+    except ValueError as err:
+        err.args += (row, col, csv_file,)
+        logging.warning("find_next_null: " + err[0])
+        logging.warning("Could not search outside table")
+    except:
+        logging.error("find_next_null: Unknown error")
+        logging.error( sys.exc_info()[:2] )
