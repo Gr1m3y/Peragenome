@@ -6,6 +6,17 @@ August 29, 2016
 Summary:
     A handler for dealing with and manipulating the csv files. Display, insert, delete, etc. should all be
     included in this module.
+
+Interface Description:
+    get_nth_field: int string -> int
+    get_nth_row: int file -> string
+    find_row: string file [int] -> string
+    get_nth_col: int file -> listOfString
+    get_col_name: int file -> string
+    get_col_num: string string -> int
+    edit_field_by_posn: int int string file ->
+    has_null_field: string -> int
+
 """
 
 import logging

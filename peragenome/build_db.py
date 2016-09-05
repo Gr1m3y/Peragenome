@@ -16,10 +16,6 @@ import time
 import logging
 import csv_handler as csv
 
-###################
-# Variables
-###################
-faa_files = {}      # Store faa filename and path
 
 # find_files: string dict bool ->
 # Description:
