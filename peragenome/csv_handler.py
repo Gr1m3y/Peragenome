@@ -16,8 +16,9 @@ Interface Description:
     get_col_num: string string -> int
     edit_field_by_posn: int int string file ->
     has_null_field: string -> int
-
 """
+# TODO List
+# - Add proper delete functions
 
 import logging
 import sys
