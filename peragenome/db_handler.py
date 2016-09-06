@@ -1,5 +1,5 @@
 """
-Peragenome - build_db.py
+Peragenome - db_handler.py
 Created by: Angus Hilts
 August 18, 2016
 
@@ -7,6 +7,11 @@ Summary:
     Functions for recursively finding .faa files and adding them to the database.
     This will save the relative file locations and create the db files, which will
     contain metadata used by Peragenome.
+
+Interface Description:
+    find_files: string dict bool string ->
+    create_db: string string ->
+
 """
 
 import os
