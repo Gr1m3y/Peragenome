@@ -51,6 +51,7 @@ def find_files(file_ext, storage, recursive_opt, path):
 #   data along with path info for each of the metagenomes in the database.
 # Side effects:
 #   Files will be made at the specified directory
+# TODO: Fix the error catch here, use exception (I think LookupError or ValueError makes the most sense here)
 def create_db(fs_root_dir, name):
 
     if not os.path.exists( os.path.abspath(fs_root_dir) ):
