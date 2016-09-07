@@ -9,7 +9,7 @@ Summary:
 Interface Description:
     create_db: string string -> string
     get_dat_field: string file -> string
-    add_new_dataset: string string file -> string
+    add_new_dataset: string string file listOf(String) -> string
 """
 
 import os
@@ -93,14 +93,26 @@ def get_dat_field(field, dat_file):
         logging.warning( "get_dat_field: " + err[0] )
         logging.warning( "The value was not read from the file" )
 
-# add_new_dataset: string string file -> string
+# add_new_dataset: string string file listOf(String) -> string
 # Description:
 #   Checks the specified path, then adds an entry to the dat_file for the new data set.
+#   If not specified, columns will use the default values. The first value in columns will be set to
+#   be the "primary key"
 #   Several files will be created:
 #       - .ds.csv       .csv file for metadata associated with the database
-def add_new_dataset(name, root_path, fs_dat_file):
+# TODO: Deside what info should be held in the .dat file for each dataset
+#   - .csv file location
+#   - dataset name
+#   - "primary key" for the table
+def add_new_dataset(name, root_path, fs_dat_file, columns=["Identifier", "Name", "Seq. Method"]):
     try:
+        # Create the filename for the new path
+        csv_filename = os.path.join(root_path, name)
+        
+
     except ValueError as err:
         err.args += (name, root_path, fs_dat_file,)
         logging.error( "add_new_dataset: " + str(err) )
         logging.error( "The dataset could not be added" )
+    except IOError as err:
+        # TODO: Update here

@@ -4,8 +4,8 @@ Created by: Angus Hilts
 August 29, 2016
 
 Summary:
-    A handler for dealing with and manipulating the csv files. Display, insert, delete, etc. should all be
-    included in this module.
+    A handler for dealing with and manipulating the csv files. Display, 
+    insert, delete, etc. should all be included in this module.
 
 Interface Description:
     get_nth_field: int string -> int
@@ -378,3 +378,9 @@ def find_next_null(row, col, csv_file):
     except:
         logging.error("find_next_null: Unknown error")
         logging.error( sys.exc_info()[:2] )
+
+#TODO: Make this function
+def get_row_list():
+
+# TODO: Make this function (returns 2d array of all fields)
+def get_table():
