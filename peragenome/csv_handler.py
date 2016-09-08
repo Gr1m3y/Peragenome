@@ -4,7 +4,7 @@ Created by: Angus Hilts
 August 29, 2016
 
 Summary:
-    A handler for dealing with and manipulating the csv files. Display, 
+    A handler for dealing with and manipulating the csv files. Display,
     insert, delete, etc. should all be included in this module.
 
 Interface Description:
@@ -16,6 +16,7 @@ Interface Description:
     get_col_num: string string -> int
     edit_field_by_posn: int int string file ->
     has_null_field: string -> int
+    get_row_by_key: string, string file -> string
 """
 # TODO List
 # - Add proper delete functions
@@ -25,7 +26,8 @@ import sys
 
 # get_nth_field: int string -> string
 # Summary:
-#   Finds the nth field in a one line string where fields are comma delimited
+#   Finds the nth field in a one line string where fields are comma 
+#   delimited
 def get_nth_field(n, row):
     try:
         return row.split(",")[n]
@@ -50,18 +52,35 @@ def get_nth_row(n, csv_file):
         logging.error('get_nth_row: Unknown error')
         logging.error( sys.exc_info()[0])
 
+# get_row_by_key: string, string file -> string
+# Summary:
+#   Finds the row with the given key_value specifed, under the
+#   primary_name heading
+def get_row_by_key(primary_name, key_value, csv_file):
+    try:
+        csv_file.seek(0)    # Reset the cursor
+        title_string = csv_file.getline().split("\n")[0]
+        title_row = title_string.split(",") # split row into list
+
+        # Find the correct column to use as the primary key
+        for i, title in enumerate(title_row):
+            if title == primary_name:
+                col_index = i
+
+        return find_row(key_value, csv_file, i) # TODO: fix error stuff here by updating find_row
+
 # find_row: string file [int] -> string
 # Summary:
-#   Finds a row in a .csv file based on the identifier given. By default,
-#   the first column is searched through for the identifier. The entire
-#   row is returned as a string
+#   Finds a row in a .csv file based on the identifier given. By
+#   default, the first column is searched through for the identifier. 
+#   The entire row is returned as a string
 def find_row(identifier, csv_file, column=0):
     try:
         csv_file.seek(0)
         for i, line in enumerate(csv_file):
             if identifier == get_nth_field(column, line):
                 return line
-        return "Row not found"
+        return "Row not found" # TODO: This should probably raise an exception
     except:
         logging.error('find_row: Unknown error')
         logging.error( sys.exc_info()[0] )
@@ -119,8 +138,8 @@ def edit_field_by_posn( row, col, value, csv_file ):
         csv_file.seek(0)
         # read the files lines into a variable
         file_lines = csv_file.readlines()
-        csv_file.seek(0)    # reset the read cursor to prevent errors in subesequent
-                            # functions
+        csv_file.seek(0)    # reset the read cursor to prevent errors 
+                            # in subesequent functions
         # read the old row into a list
         new_row = get_nth_row( row, csv_file ).rstrip().split(",")
         # update the row
@@ -174,8 +193,10 @@ def add_column(title, csv_file):
 
         print file_lines[0]
 
-        title_fields = file_lines[0].rstrip().split(",")    # Fetch the title line into a list
-        title_fields[-1] = title                            # Insert title into the title row
+        # Fetch the title line into a list
+        title_fields = file_lines[0].rstrip().split(",")
+        # Insert title into the title row
+        title_fields[-1] = title
 
         print title_fields
 
@@ -262,15 +283,15 @@ def swap_columns_by_title(title1, title2, csv_file):
 
 # create_new_table: string int listOfString -> 
 # Summary:
-#   Creates a new csv file called filename.csv with ncol number of columns. If
-#   specified, titles will be inserted for the first row.
+#   Creates a new csv file called filename.csv with ncol number of 
+#   columns. If specified, titles will be inserted for the first row.
 # Constraints:
 #   - ncol >= len(titles)
 #   - ncol >= 0
 # Side Effects:
 #   New file created in the present working director (at runtime)
-# NOTE: If the number of titles does not match ncol, then any remaining columns
-#   will be left blank
+# NOTE: If the number of titles does not match ncol, then any remaining 
+#   columns will be left blank
 def create_new_table( filename, ncol, titles=[] ):
     filename_ext = filename + ".csv"
 
@@ -288,10 +309,12 @@ def create_new_table( filename, ncol, titles=[] ):
             if titles != []:
                 fields = header.split(",")
 
-                # Iterate over titles passed as arguments and set the correct fields
+                # Iterate over titles passed as arguments and set the 
+                # correct fields
                 for i, name in enumerate(titles):
                     fields[i] = name
-                header = ",".join(fields)   # join the titles as a single string
+                header = ",".join(fields)   # join the titles as a 
+                                            # single string
 
             new_csv.seek(0) # set the cursor just in case
             new_csv.write(header)
@@ -381,6 +404,8 @@ def find_next_null(row, col, csv_file):
 
 #TODO: Make this function
 def get_row_list():
+    return 0
 
 # TODO: Make this function (returns 2d array of all fields)
 def get_table():
+    return 0
