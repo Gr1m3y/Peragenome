@@ -2,3 +2,5 @@ test/
 *.swp
 *.pyc
 *.old.py
+test*.py
+peragenome_old

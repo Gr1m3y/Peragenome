@@ -1,67 +1,62 @@
-"""
-Peragenome - dataset.py
-Created by: Angus Hilts
-September 7, 2016
+# dataset.py
+# Class for storing and updating information for a dataset
 
-Summary:
-    Class for loading and handling. This allows the information to be 
-    loaded once, then quickly accessed later. It also makes editing and 
-    individual. 
-"""
+# Operations:
+#   insert()    -   insert a new row
+#   delete()    -   delete a row
+#   get_row()   -   return a row
+#   delete_df() -   delete the dataframe (DANGEROUS)
 
-import csv
+import pandas
 import logging
-import sys
+import os
+import flib
+
+# Constants
+FILE_PATH_HEADER = "file_path"  # Default header for filepaths
 
 class Dataset:
-    files = {}      # Key is the primary key when built from the CSV,
-                    # value is a list containing the fields from the csv
-                    # for that row
+    ####################
+    # Class Functions  #
+    ####################
 
-    # TODO: I think that enumerating the fields may be most useful for accessing them...
-
-    def __init__( self, name="", root="", csv="", n=0, modified="1969-12-31",
-                  created="1969-12-31", primary="" ):
-        self.root = root
-        self.csv = csv_path
-        self.num_files = n
-        self.created = create_date
-        self.modified = mod_date
-        self.primary = primary
-        self.titles = []
-        # Return the assigned values as a dictionary
-        return self.info()
-
-    def save(self):
-        # TODO: Add the stuff for saving all the data to the csv file
-        return info()
-
-    def load(self):
-        with open(csv) as csv_file:
-            title_line = csv_file.getline() # Load first line of csv
-                                            # for getting titles
+    def __init__(self, name, csv, modified="1969-12-31", titles=[]):
+        # Initialize dataframe to None
+        self.data_frame = None
+        # Set the variables
+        self.name = name
+        self.csv = csv
+        self.modified = modified
+        # Add file_path to the titles for the tables
+        self.titles = titles
+        self.titles.insert(0, FILE_PATH_HEADER) # Push the column for file
+                                                # paths on. We don't trust the
+                                                # user to do this...
 
 
+    def create_dataframe(self, file_ext, root_path=".", recursive=False):
+        if self.df:
+            logging.warning("Dataset.create_dataframe: Dataframe already exists")
+            return
+            # TODO user proper exception above
+        else:
+            # Find all of the correct files
+            file_paths = find_files(file_ext, root_path, recursive)
+            self.data_frame = pandas.DataFrame( {FILE_PATH_HEADER:file_paths}
+                                                columns=self.titles)
 
-    # for now this will use the primary key, I will eventually add filters to sort by attributes
-    def get_row(self, key):
-        # I do not think I should raise any errors here, let the KeyError be passed up to later
-        # handling
-        return files[key]
+    def save_dataframe(self):
+        self.data_frame.to_csv(path_or_buf=self.csv)
 
-    def add_row():
+    def load_dataframe(self):
+        try:
+            if not self.data_frame:
+                self.data_frame = pandas.read_csv(self.csv, index_col=0)
+            else:
+                # TODO Use better exception here
+                logging.error( "Dataset.data_frame: Dataframe is already loaded" )
 
+    ####################
+    # Operations       #
+    ####################
 
-
-    # return dict of key, value pairs for each variable to be saved in the dat file
-    def info():
-        return {
-                    "root":self.root,
-                    "csv":self.csv,
-                    "name":self.name,
-                    "modified":self.modified,
-                    "created":self.created,
-                    "primary":self.primary
-                }
-
-    def display(self):
