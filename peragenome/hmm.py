@@ -51,6 +51,10 @@ class hmm:
       self.fasta_files = {}
       self.model_files = {}
 
+      if len(argv) <= 1:
+         usage()
+         raise error.usageException
+
       # Get arguments
       try:
          opts, args = getopt.getopt(argv[1:], arg_string, arg_list)
