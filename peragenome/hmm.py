@@ -52,7 +52,7 @@ class hmm:
       self.model_files = {}
 
       if len(argv) <= 1:
-         usage()
+         self.usage()
          raise error.usageException
 
       # Get arguments
