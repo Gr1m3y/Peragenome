@@ -44,6 +44,7 @@ def main(argv):
    # Make sure a command was supplied
    if len(argv) <= 1:
       usage()
+      sys.exit(2)
 
    # Get the name of the program for use
    prog_name = sys.argv[1]
