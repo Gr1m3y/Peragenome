@@ -41,6 +41,10 @@ def main(argv):
    arg_string = "h"
    arg_list = ["help"]
 
+   # Make sure a command was supplied
+   if len(argv) <= 1:
+      usage()
+
    # Get the name of the program for use
    prog_name = sys.argv[1]
 
