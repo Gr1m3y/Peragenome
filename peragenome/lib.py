@@ -48,7 +48,7 @@ def find_files(dir, ext, recursive):
             # Strip the path down to only the files's name
             filename = get_filename(f)
             # Finally, throw it into a dictionary
-            files[filename] = os.path.abspath(f)
+            files[filename] = os.path.abspath(pathname)
    else:
       # Use glob pattern to find files in the working directory
       # (i.e. current directory, unless otherwise specified)

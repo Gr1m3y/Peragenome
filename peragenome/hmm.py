@@ -75,7 +75,7 @@ class hmm:
             if not os.path.isdir(self.model_dir):
                raise error.badArgument
          elif opt in ["-f", "--fasta-dir"]:
-            self.fasta_dir = os.path.abspath(arg)
+            self.fasta_dir = os.path.abspath(arg) 
             # Check that the directory exists
             if not os.path.isdir(self.fasta_dir):
                raise error.badArgument
@@ -222,8 +222,10 @@ class hmm:
       self.model_files = lib.find_files(self.model_dir, self.model_ext, self.recursive)
       self.fasta_files = lib.find_files(self.fasta_dir, self.fasta_ext, self.recursive)
       self.build_output_dir()
-      self.model_search()
-      self.create_seq_files()
-      self.build_fasta_output()
+      print(self.model_files)
+      print(self.fasta_files)
+      #self.model_search()
+      #self.create_seq_files()
+      #self.build_fasta_output()
 
 
