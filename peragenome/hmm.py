@@ -224,8 +224,8 @@ class hmm:
       self.build_output_dir()
       print(self.model_files)
       print(self.fasta_files)
-      #self.model_search()
-      #self.create_seq_files()
-      #self.build_fasta_output()
+      self.model_search()
+      self.create_seq_files()
+      self.build_fasta_output()
 
 
