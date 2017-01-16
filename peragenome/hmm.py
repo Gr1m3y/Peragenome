@@ -86,6 +86,10 @@ class hmm:
          elif opt in ["-r", "--recursive"]:
             self.recursive = True
 
+      print(self.fasta_dir)
+      print(self.model_dir)
+      lib.continue_prompt()
+
 
    def usage(self):
       print("NAME")
@@ -150,12 +154,12 @@ class hmm:
             model_output = lib.shell_quotes( "%s/%s.out" % (model_out_dir, fasta_name) )
             fasta_input = lib.shell_quotes(fasta)
             model_input = lib.shell_quotes(model)
-            print("****")
-            print(fasta_input)
-            print(model_input)
-            print(model_output)
+            
             cmd = "hmmsearch -E %s %s %s > %s" % (str(self.threshold), model_input, 
                                                   fasta_input, model_output)
+
+
+            print("Executing: %s" % cmd)
 
             os.system(cmd)
 
@@ -205,6 +209,9 @@ class hmm:
 
             # Create the command
             cmd = "pullseq -n %s -i %s > %s" % (seq_output, fasta_input, fasta_output)
+            
+            print("Executing: %s" % cmd)
+
             # And run it
             os.system(cmd)
 

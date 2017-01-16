@@ -1,0 +1,296 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/Grimey/bin/Peragenome/peragenome/test/m_dir/MeMO_Hyd_G.hmm
+# target sequence database:        /Users/Grimey/bin/Peragenome/peragenome/test/f_dir/3300005235.assembled.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       MeMO_Hyd_G  [M=161]
+Accession:   PF02964.13
+Description: Methane monooxygenase, hydrolase gamma chain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------            -----------
+  ------ inclusion threshold ------
+        0.8   16.3   0.2          1   16.0   0.2    1.2  1  Ga0066637_100387251  
+          1   15.9   0.1        1.1   15.8   0.1    1.0  1  Ga0066637_112007141  
+        1.1   15.8   0.1        1.2   15.7   0.1    1.1  1  Ga0066637_100916133  
+        1.5   15.4   0.1        4.7   13.8   0.1    1.8  2  Ga0066637_100499261  
+        1.6   15.3   0.4        2.9   14.5   0.4    1.4  1  Ga0066637_101037922  
+        2.1   14.9   0.0        2.2   14.8   0.0    1.0  1  Ga0066637_103167551  
+        4.1   14.0   0.4        6.2   13.4   0.4    1.2  1  Ga0066637_103784111  
+        4.9   13.7   1.2        5.1   13.6   1.2    1.0  1  Ga0066637_113982511  
+        4.9   13.7   0.0        6.2   13.4   0.0    1.1  1  Ga0066637_102512673  
+        5.1   13.7   0.1        5.3   13.6   0.1    1.0  1  Ga0066637_109920891  
+        5.1   13.6   0.1        6.9   13.2   0.1    1.2  1  Ga0066637_105060731  
+        5.5   13.5   0.1        6.3   13.4   0.1    1.1  1  Ga0066637_107955691  
+        5.5   13.5   0.0        9.2   12.8   0.0    1.3  1  Ga0066637_100352901  
+        5.8   13.5   0.1        6.7   13.3   0.1    1.1  1  Ga0066637_113973831  
+        6.2   13.4   0.0        8.9   12.9   0.0    1.4  1  Ga0066637_103451111  
+        6.5   13.3   3.3        7.6   13.1   3.3    1.2  1  Ga0066637_105959271  
+        6.8   13.3   0.0         10   12.7   0.0    1.2  1  Ga0066637_106733711  
+        8.6   12.9   1.1        9.9   12.7   1.1    1.0  1  Ga0066637_107241381  
+
+
+Domain annotation for each sequence (and alignments):
+>> Ga0066637_100387251  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   16.0   0.2   9.5e-06         1      75     150 ..      86     163 ..      59     166 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 16.0 bits;  conditional E-value: 9.5e-06
+                          B-TTS-BHHHHH..HHHHHHHHH-SHHHHHHHHHHHHHHHTTTTS-HHHHHHHHHHHHHHHHHHHTTTTTSS-HHHHH CS
+           MeMO_Hyd_G  75 ktatGedakqva..esviakieaakdkfeaekihiefrqaykPPvlPvnlfldterqlgtklmelrntdyyaksleel 150
+                          +  t e+ k ++  +++iak+e ++d+   ++++ e +  +k  v+    f   +  l + l++  ++dy +k +  l
+  Ga0066637_100387251  86 EKITDENIKGICkiNAIIAKAEVERDTTICDQLEEEIKIICKDNVIINKAFDSKDPTLCENLVDKTKVDYCKKEVVSL 163
+                          44567777777644799*****************************9999999*****************98876555 PP
+
+>> Ga0066637_112007141  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   15.8   0.1   1.1e-05       1.1      89     157 ..       8      76 .]       4      76 .] 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 15.8 bits;  conditional E-value: 1.1e-05
+                          HHHHHHH-SHHHHHHHHHHHHHHHTTTTS-HHHHH.HHHHH.HHHHHHHHHTTTTTSS-HHHHHHHHT-EE CS
+           MeMO_Hyd_G  89 viakieaakdkfeaekihiefrqaykPPvlPvnlf.ldter.qlgtklmelrntdyyaksleelrkkrGvk 157
+                          ++aki+  +d+    ki+  f +  kPP +P + f  + +r +lg   + l+ntd + +s  +l+  +G+k
+  Ga0066637_112007141   8 ALAKIDRNNDYALYSKIRF-FSRDKKPPAMPDENFrHKIDRfNLGP-PVVLKNTDIFHTSAYDLKPPKGAK 76 
+                          689*********99**987.66778******876636789944665.5679*************9999876 PP
+
+>> Ga0066637_100916133  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   15.7   0.1   1.2e-05       1.2      63     108 ..      25      70 ..       7      74 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 15.7 bits;  conditional E-value: 1.2e-05
+                          HHHHS-HHHHHHB-TTS-BHHHHHHHHHHHHHH-SHHHHHHHHHHH CS
+           MeMO_Hyd_G  63 kakefsdadlltktatGedakqvaesviakieaakdkfeaekihie 108
+                          +++++s++++ + +at e+a ++a + + +i+aa+  +eae +  +
+  Ga0066637_100916133  25 RHSNLSAEEFCKFCATKEEAIEIATQLVSQIAAAHYSHEAEEVYKN 70 
+                          6899*************************************99766 PP
+
+>> Ga0066637_100499261  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.0       6.4   6.7e+05      81      95 ..      64      78 ..      38      85 .. 0.66
+   2 ?   13.8   0.1   4.5e-05       4.7       6      70 ..     246     312 ..     241     322 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 6.4
+                         BHHHHHHHHHHHHHH CS
+           MeMO_Hyd_G 81 dakqvaesviakiea 95
+                         + kqv +svi+kie 
+  Ga0066637_100499261 64 EKKQVGKSVIKKIEQ 78
+                         458899999999875 PP
+
+  == domain 2  score: 13.8 bits;  conditional E-value: 4.5e-05
+                          HHHHHHHHHHT--SHHHHHHHHHHHHHHHSSTT-S-STTT.TTHHHHHHHHHHHHHHHHHH.HS-HH CS
+           MeMO_Hyd_G   6 trsewlakiaelktlekaaallkdfrkdhtspfrtsyeld.ldslwieakleeklavlkak.efsda 70 
+                          +r+    + +++kt+++   +  +f+++++  ++++y++  +  l i  kle k+ +lka  +++++
+  Ga0066637_100499261 246 ARKLHTSRRDAFKTVNDIPIASVNFKEKKIDYLKKDYSKKsTSELIIKEKLESKVGLLKAYpNMQKE 312
+                          56777789999**************************8761578***************85245444 PP
+
+>> Ga0066637_101037922  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.5   0.4   2.8e-05       2.9      31      99 ..      65     127 ..      43     139 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 14.5 bits;  conditional E-value: 2.8e-05
+                          HHHHSSTT-S-STTTTTHHHHHHHHHHHHHHHHHHHS-HHHHHHB-TTS-BHHHHHHHHHHHHHH-SHH CS
+           MeMO_Hyd_G  31 rkdhtspfrtsyeldldslwieakleeklavlkakefsdadlltktatGedakqvaesviakieaakdk 99 
+                          r +++     + +ld+d   i+a + ekl v+k++    + l +++ tGe+ak va++  +k + a+  
+  Ga0066637_101037922  65 RGQEVV----QKTLDMDRQAIQAVIGEKLPVVKSELT--TTLESRAYTGEQAKMVAAAQSEKHALATQI 127
+                          444444....4679*******************9865..568899*************99998877655 PP
+
+>> Ga0066637_103167551  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.8   0.0   2.1e-05       2.2     114     153 ..      14      53 ..       2      57 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 14.8 bits;  conditional E-value: 2.1e-05
+                          TTTS-HHHHHHHHHHHHHHHHHHHTTTTTSS-HHHHHHHH CS
+           MeMO_Hyd_G 114 kPPvlPvnlfldterqlgtklmelrntdyyaksleelrkk 153
+                          k  +  +n+++ ++ ql+ kl+++ n+ + ++ lee+r k
+  Ga0066637_103167551  14 KYTISQINFLFRAKEQLAGKLLTIHNLFFLETKLEEIRGK 53 
+                          5567789******************************976 PP
+
+>> Ga0066637_103784111  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.4   0.4     6e-05       6.2      41     108 ..      92     160 ..      80     164 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 6e-05
+                          -STTTTTHHHHHHHHHHHHHHHHHHHS-HHHHHHB-TTS-B.HHHHHHHHHHHHHH-SHHHHHHHHHHH CS
+           MeMO_Hyd_G  41 syeldldslwieakleeklavlkakefsdadlltktatGed.akqvaesviakieaakdkfeaekihie 108
+                          ++++ ld +  e   e k+a+l a ++ d+ l ++  +Ge+ a+++      ki++ +d +ea k++ e
+  Ga0066637_103784111  92 QWQVVLDHVNSESPAEWKIAILEADDILDEILEDQGYVGETvAEKLKTMSRTKIASYDDIWEAHKVRNE 160
+                          688888999999999*************************94555666667899999********9876 PP
+
+>> Ga0066637_113982511  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.6   1.2   4.9e-05       5.1      56     103 ..       2      50 ..       1      58 [. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 4.9e-05
+                          HHHHHHHHH.HHS-HHHHHHB-TTS-BHHHHHHHHHHHHHH-SHHHHHH CS
+           MeMO_Hyd_G  56 eeklavlka.kefsdadlltktatGedakqvaesviakieaakdkfeae 103
+                          e+k+av+k  +e +++ l++  +  ++a qv++s ++k+ea++ k+++e
+  Ga0066637_113982511   2 EQKIAVIKVvREATEKGLQEAKQLVDTAPQVVKSSVNKAEAEELKKKLE 50 
+                          789****9648899999*************************9888877 PP
+
+>> Ga0066637_102512673  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.4   0.0   5.9e-05       6.2       1      52 [.      16      71 ..      16      76 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 5.9e-05
+                         SSSBHHHHHHHHHHHT--SHHHH....HHHHHHHHHHHSSTT-S-STTTTTHHHHH CS
+           MeMO_Hyd_G  1 ihenptrsewlakiaelktleka....aallkdfrkdhtspfrtsyeldldslwie 52
+                         i++  tr + +++i++l+ l k+    +  lk++r+  + pfr  y++++d++ i+
+  Ga0066637_102512673 16 IKDKTTRIKIIKHIKKLEKLPKSgkplKHDLKNHRTTRIPPFRLIYRIEEDKIIIN 71
+                         67889999999******99988722223457899999***************9986 PP
+
+>> Ga0066637_109920891  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.6   0.1     5e-05       5.3      55     106 ..       1      52 [.       1      62 [. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 5e-05
+                          HHHHHHHHHHHHS-HHHHHHB-TTS-BHHHHHHHHHHHHHH-SHHHHHHHHH CS
+           MeMO_Hyd_G  55 leeklavlkakefsdadlltktatGedakqvaesviakieaakdkfeaekih 106
+                          +e k +++ ++++ ++   +kt +G++ +q++++ i++ e ak + ++eki 
+  Ga0066637_109920891   1 MEKKTTIVASRNVVNKLCERKTKIGDTYNQIINDLIDRDENAKKNGKMEKIY 52 
+                          5888999999999999999*******************************96 PP
+
+>> Ga0066637_105060731  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.2   0.1   6.6e-05       6.9      57     114 ..      24      83 ..      12      98 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 6.6e-05
+                          HHHHHHHHHHS-HHHHHHB-TTS-BHHHHHHHHHHHHHH-SHHHHHHHHHH..HHHHHTT CS
+           MeMO_Hyd_G  57 eklavlkakefsdadlltktatGedakqvaesviakieaakdkfeaekihi..efrqayk 114
+                           k  v  +k ++++dl t+  +  ++ ++++++i k+  + d +e e+ h   +f q+ k
+  Ga0066637_105060731  24 KKKGVCSQKYIQEKDLATQIKARLQSVAICDEWISKMLKQVDEWEKEQSHSsqKFVQNLK 83 
+                          56677888999************************************9885115666655 PP
+
+>> Ga0066637_107955691  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.4   0.1     6e-05       6.3     123     156 ..       5      38 ..       2      46 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 6e-05
+                          HHHHHHHHHHHHHHHTTTTTSS-HHHHHHHHT-E CS
+           MeMO_Hyd_G 123 fldterqlgtklmelrntdyyaksleelrkkrGv 156
+                          f++ +r  g+kl  l n+++y++ + e+r+  G 
+  Ga0066637_107955691   5 FFKNDRIKGQKLAMLHNIQFYKNLFAEIRESAGR 38 
+                          9****************************99885 PP
+
+>> Ga0066637_100352901  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8   0.0   8.8e-05       9.2      88     159 ..      27      98 ..      10     100 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 8.8e-05
+                          HHHHHHHH-SHHHHHHHHHHHHHHHTTTTS-HHHHH.HHHHH.HHHHHHHHHTTTTTSS-HHHHHHHHT-EEEE CS
+           MeMO_Hyd_G  88 sviakieaakdkfeaekihiefrqaykPPvlPvnlf.ldter.qlgtklmelrntdyyaksleelrkkrGvkvv 159
+                          +++aki+  +d+    ki+  f +  kPP lP + f  + +r +lg   + l+ntd + +s  +l+  +G+k v
+  Ga0066637_100352901  27 NALAKIDRNNDYALYSKIRF-FSRDKKPPALPGENFrHKIDRfNLGP-PVVLKNTDIFHTSAYDLKPPKGAKFV 98 
+                          4689*********99**987.66678******877636789944665.5679*****************99965 PP
+
+>> Ga0066637_113973831  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.3   0.1   6.4e-05       6.7     123     155 ..       5      37 ..       2      45 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 6.4e-05
+                          HHHHHHHHHHHHHHHTTTTTSS-HHHHHHHHT- CS
+           MeMO_Hyd_G 123 fldterqlgtklmelrntdyyaksleelrkkrG 155
+                          f++ +r  g+kl  l n+++y++ + e+r+  G
+  Ga0066637_113973831   5 FFKNDRIKGQKLAMLHNIQFYKNLFAEIRESAG 37 
+                          9****************************9988 PP
+
+>> Ga0066637_103451111  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.9   0.0   8.5e-05       8.9      22      70 ..      24      70 ..       5     125 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 12.9 bits;  conditional E-value: 8.5e-05
+                         HHHHHHHHHHHHHSSTT-S-STTTTTHHHHHHHHHHHHHHHHHHHS-HH CS
+           MeMO_Hyd_G 22 kaaallkdfrkdhtspfrtsyeldldslwieakleeklavlkakefsda 70
+                         +   + k+f  ++  p +t+++l  ++ +iea l e + v+k+k+++  
+  Ga0066637_103451111 24 EVLLMGKKFIINF--PTKTNWRLPSEYQYIEAGLTELMKVIKEKKIKSI 70
+                         5555555555554..66**************************998765 PP
+
+>> Ga0066637_105959271  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.1   3.3   7.3e-05       7.6      15      96 ..       4      87 ..       1     107 [. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 13.1 bits;  conditional E-value: 7.3e-05
+                         HT--SHHHHH.HHHHHHHHHHSSTT-S-STTTTTHHHHHHHHH.HHHHHHHHHHS-HHHHHHB-TTS-BHHHHHHHHHHHHHH- CS
+           MeMO_Hyd_G 15 aelktlekaa.allkdfrkdhtspfrtsyeldldslwieakle.eklavlkakefsdadlltktatGedakqvaesviakieaa 96
+                         a+lktl++a+ ++lkd  ++h + + ++ + ++ +  ie k e +kl + k+ + + ++l+++++  ++a ++ ++ ia + a 
+  Ga0066637_105959271  4 AKLKTLDDATkQALKDLEARHKAGLISDKAYEKQKEVIETKAEkDKLNIEKTAQNERENLQKEALKKQKAIDIGQALIAGAMAI 87
+                         89******97358*****************************956999999999999999999999999999999999877665 PP
+
+>> Ga0066637_106733711  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.7   0.0   9.5e-05        10      31      70 ..      58      99 ..      49     111 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 9.5e-05
+                         HHHHSSTT-S-STT..TTTHHHHHHHHHHHHHHHHHHHS-HH CS
+           MeMO_Hyd_G 31 rkdhtspfrtsyel..dldslwieakleeklavlkakefsda 70
+                         r +++  fr+ ++   d+ +lw+e+ +e +l    +ke+++ 
+  Ga0066637_106733711 58 RFKNMQGFRQTFRNgfDNQGLWVEVEVEKQLGFKTKKEIENY 99
+                         77899999999986337889***********99888887763 PP
+
+>> Ga0066637_107241381  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.7   1.1   9.5e-05       9.9      56     104 ..       4      53 ..       2      60 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 9.5e-05
+                          HHHHHHHHH.HHS-HHHHHHB-TTS-BHHHHHHHHHHHHHH-SHHHHHHH CS
+           MeMO_Hyd_G  56 eeklavlka.kefsdadlltktatGedakqvaesviakieaakdkfeaek 104
+                          e+k+av+k  +e +++ l++  +  ++a qv++s ++k+ea++ k+++e 
+  Ga0066637_107241381   4 EQKIAVIKVvREATEKGLQEAKQLVDTAPQVVKSGVNKAEAEELKKKLEA 53 
+                          889****9648899999*************************98888774 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (161 nodes)
+Target sequences:                      1880933  (260068149 residues searched)
+Passed MSV filter:                     47257  (0.0251242); expected 37618.7 (0.02)
+Passed bias filter:                    32508  (0.0172829); expected 37618.7 (0.02)
+Passed Vit filter:                      1935  (0.00102874); expected 1880.9 (0.001)
+Passed Fwd filter:                        25  (1.32913e-05); expected 18.8 (1e-05)
+Initial search space (Z):            1880933  [actual number of targets]
+Domain search space  (domZ):              18  [number of targets reported over threshold]
+# CPU time: 6.83u 0.17s 00:00:07.00 Elapsed: 00:00:02.64
+# Mc/sec: 15860.22
+//
+[ok]

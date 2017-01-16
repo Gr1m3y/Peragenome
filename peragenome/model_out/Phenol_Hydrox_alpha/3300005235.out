@@ -1,0 +1,282 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/Grimey/bin/Peragenome/peragenome/test/m_dir/Phenol_Hydrox_alpha.hmm
+# target sequence database:        /Users/Grimey/bin/Peragenome/peragenome/test/f_dir/3300005235.assembled.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Phenol_Hydrox  [M=230]
+Accession:   PF02332.15
+Description: Methane/Phenol/Toluene Hydroxylase
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+    2.3e-18   73.2   0.1    2.7e-18   73.0   0.1    1.0  1  Ga0066637_108567311   
+     0.0092   22.1   0.3         16   11.6   0.0    2.1  2  Ga0066637_100550651   
+  ------ inclusion threshold ------
+       0.87   15.7   0.0          1   15.4   0.0    1.0  1  Ga0066637_108509971   
+       0.99   15.5   0.0        1.2   15.2   0.0    1.0  1  Ga0066637_107793901   
+        1.4   15.0   0.0        1.7   14.8   0.0    1.1  1  Ga0066637_108791781   
+        1.7   14.7   0.0        2.1   14.5   0.0    1.1  1  Ga0066637_113498071   
+        1.8   14.6   0.0        2.4   14.2   0.0    1.1  1  Ga0066637_101745611   
+        2.5   14.2   0.3         22   11.1   0.2    1.9  2  Ga0066637_102489191   
+        3.2   13.8   0.0        3.5   13.7   0.0    1.0  1  Ga0066637_113150031   
+        4.7   13.3   0.0        6.2   12.9   0.0    1.1  1  Ga0066637_105743101   
+        5.1   13.2   0.0        9.3   12.3   0.0    1.4  1  Ga0066637_1000016431  
+        5.6   13.0   0.0        8.5   12.5   0.0    1.2  1  Ga0066637_101148672   
+        5.9   13.0   0.0        9.6   12.3   0.0    1.3  1  Ga0066637_100309252   
+        6.3   12.9   0.1        9.3   12.3   0.1    1.3  1  Ga0066637_108914421   
+        9.4   12.3   0.1      2e+02    8.0   0.0    2.0  2  Ga0066637_100015128   
+
+
+Domain annotation for each sequence (and alignments):
+>> Ga0066637_108567311  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.0   0.1   2.1e-23   2.7e-18      72     162 ..       2      89 ..       1      91 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 73.0 bits;  conditional E-value: 2.1e-23
+                          HHHHHHHHHHHTTHHHHH-SSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHSTT----SHH.HHHHH-.THHHHHHHHHHHHT---HHH CS
+        Phenol_Hydrox  72 lkkhlgalrhleygaqmaeaylaryapgtairnaalfqalDelrhaqiltylglelakavdgafdgale.kaawlndpawqglRelvEdl 160
+                          lk +l+++ +ley a +++a+++r+++g++ r+a+ +q++Delrh q++t++++++    +++f+g ++ k++ ++ ++++++++++Ed+
+  Ga0066637_108567311   2 LKIFLTGVSPLEYYAYRGFAHVGRQFTGAGARVACQMQSIDELRHNQTQTHALSHY----NKYFNGMHSpKHMYDRVWYLSVPKSFFEDA 87 
+                          799*****************************************************....9****************************9 PP
+
+                          HH CS
+        Phenol_Hydrox 161 lv 162
+                           +
+  Ga0066637_108567311  88 YT 89 
+                          77 PP
+
+>> Ga0066637_100550651  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.6   0.0   0.00012        16      87     127 ..      18      58 ..       5      69 .. 0.86
+   2 !    8.9   0.1   0.00083     1e+02     190     220 ..      98     128 ..      90     132 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 0.00012
+                          HHH-SSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHSTT- CS
+        Phenol_Hydrox  87 qmaeaylaryapgtairnaalfqalDelrhaqiltylglel 127
+                           m +a ++       ++na+  qa+De+ ha +l+ +  +l
+  Ga0066637_100550651  18 YMVHAEMCENWGYGKLHNAIRSQAMDEMHHAEWLIERIIFL 58 
+                          578888999888899********************998888 PP
+
+  == domain 2  score: 8.9 bits;  conditional E-value: 0.00083
+                          SHHHHHHHHHHHHHHHHHHHHHHHHIIIIIT CS
+        Phenol_Hydrox 190 aevaaangDeltpslissaqsdearharwgd 220
+                           + a++ gD++t+ l+s++ + e+ ha wg+
+  Ga0066637_100550651  98 IKLAREVGDQVTSDLFSKILAMEEGHADWGE 128
+                          56899************************97 PP
+
+>> Ga0066637_108509971  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   15.4   0.0   8.2e-06         1      33      80 ..       7      54 ..       6      57 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 15.4 bits;  conditional E-value: 8.2e-06
+                         HHHHHHHHHHHHHHHHHHHHTTGGGGSHHHHHIIIIIHHHHHHHHHHH CS
+        Phenol_Hydrox 33 tyrtYvkaqaekeeaveavldaaerrglferldpawrevlkkhlgalr 80
+                         + +++vka ++++++ ++  d++++ + + +ldp+w+e+ k+++ +  
+  Ga0066637_108509971  7 WKQEHVKATRTIKRESQRWSDFCRNLEFLGALDPTWYEKKKSFYEPSS 54
+                         7789****************************************9975 PP
+
+>> Ga0066637_107793901  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   15.2   0.0   9.6e-06       1.2      33      80 ..       9      56 ..       8      59 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 15.2 bits;  conditional E-value: 9.6e-06
+                         HHHHHHHHHHHHHHHHHHHHTTGGGGSHHHHHIIIIIHHHHHHHHHHH CS
+        Phenol_Hydrox 33 tyrtYvkaqaekeeaveavldaaerrglferldpawrevlkkhlgalr 80
+                         + +++vka ++++++ ++  d++++ + + +ldp+w+e+ k+++ +  
+  Ga0066637_107793901  9 WKQEHVKATRTIKRESQKWSDFCRNLEFLGALDPTWYEKKKSFYEPSS 56
+                         7789****************************************9975 PP
+
+>> Ga0066637_108791781  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.8   0.0   1.3e-05       1.7     145     190 ..       5      52 ..       2      63 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 14.8 bits;  conditional E-value: 1.3e-05
+                          HHHHHHH.HHT---HHHHHHHHHTHHHHHHHHHHHHTHHHHGGGGT.S CS
+        Phenol_Hydrox 145 lndpawq.glRelvEdllvadDwfealvalnlvfeplltnllfvaf.a 190
+                          +n+ +wq g +e++E ++  +Dw e ++ ++  + p ++ l+++++  
+  Ga0066637_108791781   5 ENSQYWQyGYKEAMEYVFKNKDWYEKVIFTQKYMQPYIYYLFYNKYeP 52 
+                          6888999678*********************************99844 PP
+
+>> Ga0066637_113498071  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.5   0.0   1.6e-05       2.1      33      78 ..      23      68 ..      20      70 .] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 14.5 bits;  conditional E-value: 1.6e-05
+                         HHHHHHHHHHHHHHHHHHHHTTGGGGSHHHHHIIIIIHHHHHHHHH CS
+        Phenol_Hydrox 33 tyrtYvkaqaekeeaveavldaaerrglferldpawrevlkkhlga 78
+                         + +++vka ++++++ ++  d++++ + + +ldp+w+e+ k+++ +
+  Ga0066637_113498071 23 WKQEHVKATRTIKRESQRWSDFCRNLEFLGALDPTWYEKKKSFYEP 68
+                         7789****************************************88 PP
+
+>> Ga0066637_101745611  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.2   0.0   1.9e-05       2.4      28      96 ..       9      77 ..       5      84 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 14.2 bits;  conditional E-value: 1.9e-05
+                         --HHHHHHHHHHHHHHHHHHHHHHHTTGGGGSHHHHHIIIIIHHHHHHHHHHHHHTTHHHHH-SSHHHH CS
+        Phenol_Hydrox 28 DPrkltyrtYvkaqaekeeaveavldaaerrglferldpawrevlkkhlgalrhleygaqmaeaylary 96
+                         +P + +yr+Y+    ek   ++++ d++ +r  +++l +   + l ++l +l+ ++   q+ +a++ r 
+  Ga0066637_101745611  9 EPTRGYYRSYTYLDGEKIALAYSITDFVISRAGANTLAEIAARGLPSILIPLPSAASNHQCVNAKIFRK 77
+                         79999***********************************************************99986 PP
+
+>> Ga0066637_102489191  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.0      0.15   1.8e+04     185     216 ..       2      33 ..       1      54 [. 0.76
+   2 ?   11.1   0.2   0.00018        22     190     223 ..      68     101 ..      64     104 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.15
+                          GGGGTSHHHHHHHHHHHHHHHHHHHHHHHHII CS
+        Phenol_Hydrox 185 lfvafaevaaangDeltpslissaqsdearha 216
+                          ++ ++a +a  +g + ++  ++s+  dea h 
+  Ga0066637_102489191   2 QYLSMALKADNEGRTEVAQTLRSIAMDEAGHG 33 
+                          56667777778888888888888888887774 PP
+
+  == domain 2  score: 11.1 bits;  conditional E-value: 0.00018
+                          SHHHHHHHHHHHHHHHHHHHHHHHHIIIIIT-XX CS
+        Phenol_Hydrox 190 aevaaangDeltpslissaqsdearharwgdall 223
+                          ++va a g   ++s++++a +dearha+  + ll
+  Ga0066637_102489191  68 MKVADADGKKEVASFFDTAAHDEARHAAMLQNLL 101
+                          8899************************998886 PP
+
+>> Ga0066637_113150031  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.7   0.0   2.8e-05       3.5      37      83 ..       8      55 ..       3      66 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 13.7 bits;  conditional E-value: 2.8e-05
+                         HHHHHHHHHHHHHHHHTTGGGGSHHHHHIIIIIHH.HHHHHHHHHHHT CS
+        Phenol_Hydrox 37 Yvkaqaekeeaveavldaaerrglferldpawrev.lkkhlgalrhle 83
+                         + + q+  +e+ ++++d +  +glf+ l+++w    lk ++g lr+  
+  Ga0066637_113150031  8 FKMVQRGSNEKRYGFYDMVICAGLFDYLSDKWAVRlLKVLYGLLRPGG 55
+                         6678999*************************9998999999999865 PP
+
+>> Ga0066637_105743101  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.9   0.0     5e-05       6.2      33      80 ..      74     121 ..      73     124 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 12.9 bits;  conditional E-value: 5e-05
+                          HHHHHHHHHHHHHHHHHHHHTTGGGGSHHHHHIIIIIHHHHHHHHHHH CS
+        Phenol_Hydrox  33 tyrtYvkaqaekeeaveavldaaerrglferldpawrevlkkhlgalr 80 
+                          + +++vka ++++++ ++  d++++ + + +ldp+w+e+ k+++ +  
+  Ga0066637_105743101  74 WKQEHVKATRTIKRESQKWSDFCRNLEFLGALDPTWYEKKKSFYEPSS 121
+                          6789****************************************9975 PP
+
+>> Ga0066637_1000016431  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.3   0.0   7.4e-05       9.3      62     127 ..      78     143 ..      66     159 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 12.3 bits;  conditional E-value: 7.4e-05
+                           HHHIIIIIHHHHHHHHHHHHHTTHHHHH-SSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHSTT- CS
+         Phenol_Hydrox  62 erldpawrevlkkhlgalrhleygaqmaeaylaryapgtairnaalfqalDelrhaqiltylglel 127
+                           + ldpa r++  ++l+    +e++     a + + a+++ ir  + f + De rha  +  +++++
+  Ga0066637_1000016431  78 SGLDPALRKEFMDFLVSSITAEFSGCVLYAEMRKRAKNPDIRELFGFMSRDEARHAGFINDVLKDF 143
+                           579*****************************************************8887666665 PP
+
+>> Ga0066637_101148672  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.0   6.7e-05       8.5       8      79 ..      66     135 ..      61     149 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 6.7e-05
+                          S--SS-GG--S-TTG---T---HHHHHHHHHHHHHHHHHHHHHHHTTGGGGSHHHHHIIIIIHHHHHHHHHH CS
+        Phenol_Hydrox   8 gdpsypeytalkvsdWdafrDPrkltyrtYvkaqaekeeaveavldaaerrglferldpawrevlkkhlgal 79 
+                           d++yp ++a  + dW + +D +k++  + +  q++++ +  +v++aa++ + +++++++ ++vlk+ ++  
+  Ga0066637_101148672  66 ADTIYPIMHA--LIDWGRSKDVKKMISMSGIPVQDRQDVKQLRVFAAASNPEILKAVKDKGVQVLKEGYMVG 135
+                          5677774333..36****************************************************999865 PP
+
+>> Ga0066637_100309252  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.3   0.0   7.6e-05       9.6      63     169 ..     442     546 ..     434     549 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 12.3 bits;  conditional E-value: 7.6e-05
+                          HHIIIIIHHHHHHHHHHHHHTTHHHHH-SSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHSTT----SHH.HHHHH-..THHHHHHHHH CS
+        Phenol_Hydrox  63 rldpawrevlkkhlgalrhleygaqmaeaylaryapgtairnaalfqalDelrhaqiltylglelakavdgafdgale..kaawlndpaw 150
+                            + +w + +k++++a    e   ++  + + +ya g++ ++ + ++a D l +a++   ++ + a ++ g     ++   + +++d   
+  Ga0066637_100309252 442 WWSHRWDRLMKRLVTATVGGETYFAIKPSFIRKYAEGSYPKSLIYVGACDSLENATMANAFLEKGAATYFG----FEKtiYTSFDKDMWT 527
+                          66889****************************************************99999999555443....33335999999999* PP
+
+                          HHHT---HHHHHHHHHTHH CS
+        Phenol_Hydrox 151 qglRelvEdllvadDwfea 169
+                          q + +lv++ ++++ +f++
+  Ga0066637_100309252 528 QLFTKLVDNKMTTKQAFDS 546
+                          ***********99988875 PP
+
+>> Ga0066637_108914421  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.3   0.1   7.4e-05       9.3      10      34 ..      38      59 ..      22      61 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 12.3 bits;  conditional E-value: 7.4e-05
+                         -SS-GG--S-TTG---T---HHHHH CS
+        Phenol_Hydrox 10 psypeytalkvsdWdafrDPrklty 34
+                          +y+   +++++dW+ + D rk+++
+  Ga0066637_108914421 38 NTYQ---GIPHKDWKNWHDQRKFYE 59
+                         3344...****************97 PP
+
+>> Ga0066637_100015128  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.0   0.0    0.0016     2e+02     185     222 ..      34      71 ..      11      76 .. 0.87
+   2 ?    2.6   0.0     0.068   8.6e+03     193     224 ..     104     135 ..      97     140 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 8.0 bits;  conditional E-value: 0.0016
+                          GGGGTSHHHHHHHHHHHHHHHHHHHHHHHHIIIIIT-X CS
+        Phenol_Hydrox 185 lfvafaevaaangDeltpslissaqsdearharwgdal 222
+                          l+ a+a++a+++g   ++ +++s+  dea+ha+  ++l
+  Ga0066637_100015128  34 LYLAMARQAQREGYPEVAEILRSIALDEAWHAARFAEL 71 
+                          7899***************************9977765 PP
+
+  == domain 2  score: 2.6 bits;  conditional E-value: 0.068
+                          HHHHHHHHHHHHHHHHHHHHHHIIIIIT-XXX CS
+        Phenol_Hydrox 193 aaangDeltpslissaqsdearharwgdallk 224
+                          a++ g      ++++   dearhar  + llk
+  Ga0066637_100015128 104 AKEAGVAEAHDFFDESSRDEARHARALEGLLK 135
+                          555555666678899999*******9999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (230 nodes)
+Target sequences:                      1880933  (260068149 residues searched)
+Passed MSV filter:                     31105  (0.016537); expected 37618.7 (0.02)
+Passed bias filter:                    24705  (0.0131344); expected 37618.7 (0.02)
+Passed Vit filter:                      1782  (0.000947402); expected 1880.9 (0.001)
+Passed Fwd filter:                        27  (1.43546e-05); expected 18.8 (1e-05)
+Initial search space (Z):            1880933  [actual number of targets]
+Domain search space  (domZ):              15  [number of targets reported over threshold]
+# CPU time: 8.31u 0.17s 00:00:08.48 Elapsed: 00:00:02.92
+# Mc/sec: 20484.82
+//
+[ok]

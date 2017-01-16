@@ -12,3 +12,6 @@ class usageException(Exception):
 
 class badArgument(Exception):
    """Raise if an argument is passed"""
+
+class promptException(Exception):
+   """Raise if a continue prompt is declined"""

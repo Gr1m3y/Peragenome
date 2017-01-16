@@ -10,6 +10,7 @@ Module Summary:
 import os
 import glob
 import fnmatch
+import error
 
 # shell_quote: string -> string
 # Description:
@@ -58,6 +59,13 @@ def find_files(dir, ext, recursive):
          files[filename] = f
 
    return files
+
+# Generic continue prompt
+def continue_prompt():
+  positive = ["y", "yes", "Y", "Yes", "YES"]
+  response = input("Would you like to continue? (y/n)")
+  if response not in positive:
+    raise error.promptException
 
 # For string formatting
 # Example:

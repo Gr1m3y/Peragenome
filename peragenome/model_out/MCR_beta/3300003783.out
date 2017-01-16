@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/Grimey/bin/Peragenome/peragenome/test/m_dir/MCR_beta.hmm
+# target sequence database:        /Users/Grimey/bin/Peragenome/peragenome/test/f_dir/3300003783.assembled.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       MCR_beta  [M=249]
+Accession:   PF02241.15
+Description: Methyl-coenzyme M reductase beta subunit, C-terminal domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------           -----------
+     0.0053   18.8   0.7     0.0079   18.2   0.3    1.5  2  Ga0007850_10002007  
+
+
+Domain annotation for each sequence (and alignments):
+>> Ga0007850_10002007  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.2   0.3   8.1e-08    0.0079     169     227 ..       4      61 ..       1      81 [. 0.82
+   2 ?   -1.9   0.0      0.11   1.1e+04     198     217 ..     109     128 ..      86     133 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 18.2 bits;  conditional E-value: 8.1e-08
+            MCR_beta 169 avGfsffshsiyGGGGpGifnGnhvvtrhskGfaipcvaaavaldaGtqlfspeatsgl 227
+                         ++ + f + + yG G p if Gn  vt  + G a  ++ a+v  d+  q++ ++ t + 
+  Ga0007850_10002007   4 TLAVKFQADASYGPGTPVIFGGNNEVTT-ASGQAQTTAIAGVVTDTAEQVLNADLTGSN 61 
+                         56678899999***************97.5699999***************99988543 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 0.11
+            MCR_beta 198 skGfaipcvaaavaldaGtq 217
+                         s G +i  +  + ++d+G+q
+  Ga0007850_10002007 109 STGSIIGRAIESSTVDSGSQ 128
+                         44444555555555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (249 nodes)
+Target sequences:                        97581  (12224104 residues searched)
+Passed MSV filter:                      2588  (0.0265216); expected 1951.6 (0.02)
+Passed bias filter:                     1473  (0.0150952); expected 1951.6 (0.02)
+Passed Vit filter:                        91  (0.000932559); expected 97.6 (0.001)
+Passed Fwd filter:                         1  (1.02479e-05); expected 1.0 (1e-05)
+Initial search space (Z):              97581  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.43u 0.01s 00:00:00.44 Elapsed: 00:00:00.16
+# Mc/sec: 19023.76
+//
+[ok]

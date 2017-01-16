@@ -1,0 +1,215 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/Grimey/bin/Peragenome/peragenome/test/m_dir/MCR_beta.hmm
+# target sequence database:        /Users/Grimey/bin/Peragenome/peragenome/test/f_dir/3300001453.assembled.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       MCR_beta  [M=249]
+Accession:   PF02241.15
+Description: Methyl-coenzyme M reductase beta subunit, C-terminal domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                 Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                 -----------
+   4.1e-121  406.2   7.1   4.1e-121  406.2   7.1    1.8  2  JGI20197J15136_100007718  
+    4.2e-99  334.1   5.7    4.7e-99  334.0   5.7    1.0  1  JGI20197J15136_10019001   
+    1.5e-76  260.3   5.4    1.6e-76  260.1   5.4    1.0  1  JGI20197J15136_10166061   
+      3e-63  216.7   5.2    3.3e-63  216.5   5.2    1.0  1  JGI20197J15136_10600611   
+    1.4e-52  181.7   3.3    1.5e-52  181.6   3.3    1.0  1  JGI20197J15136_10935111   
+    2.7e-47  164.4   0.8    2.7e-47  164.4   0.8    1.7  2  JGI20197J15136_10035622   
+      4e-16   62.3   0.1    4.2e-16   62.2   0.1    1.0  1  JGI20197J15136_10200852   
+  ------ inclusion threshold ------
+       0.55   12.7   0.1       0.56   12.7   0.1    1.1  1  JGI20197J15136_10695581   
+       0.91   12.0   0.0        1.1   11.8   0.0    1.1  1  JGI20197J15136_10398131   
+          1   11.9   0.0        1.3   11.5   0.0    1.1  1  JGI20197J15136_10278081   
+
+
+Domain annotation for each sequence (and alignments):
+>> JGI20197J15136_100007718  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.2      0.42   5.9e+03     207     244 ..     122     157 ..     111     160 .. 0.77
+   2 !  406.2   7.1  2.9e-125  4.1e-121       1     249 []     189     437 ..     189     437 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.42
+                  MCR_beta 207 aaavaldaGtqlfspeatsglvgevfgeidefreplka 244
+                                a+++  aGt   s+  t +++ ++f ++d f+ p+ +
+  JGI20197J15136_100007718 122 EAGATYVAGTTATSSALTQAII-DMF-KVDMFQAPMVK 157
+                               4777888999999999998888.666.79999999975 PP
+
+  == domain 2  score: 406.2 bits;  conditional E-value: 2.9e-125
+                  MCR_beta   1 GyalrnikanhvvaitkknalnaaalssileqtavfemGdavGaferahllglayqGlnannlvydlvkengkegtvGtvveslv 85 
+                               Gy+lrn+ +nhv+a+t k ++na alssi+eq++v+emGda+G  er  l gla+qG nann+ y+lvkeng +gt+G+vv+s v
+  JGI20197J15136_100007718 189 GYSLRNVAVNHVAAATGKRTMNAXALSSIFEQAGVWEMGDAIGWNERXXLCGLAMQGXNANNVXYSLVKENGXDGTIGSVVASTV 273
+                               9************************************************************************************ PP
+
+                  MCR_beta  86 eraiedkvikvekklpsgyklyetkdvalwnayaaaGllaavivnvgaaraaqavsstllyyndlleketglpGvdfGrveGtav 170
+                               e+a + +vik++ + psg+k  +t dva wnay+aa +laa+ivn+gaar aqavsstlly ndl+e+etglpG+dfG+v+Gtav
+  JGI20197J15136_100007718 274 EKAKAAGVIKEDTTWPSGFKAMKTGDVASWNAYCAACTLAATIVNCGAARGAQAVSSTLLYANDLIEHETGLPGCDFGKVMGTAV 358
+                               ************************************************************************************* PP
+
+                  MCR_beta 171 GfsffshsiyGGGGpGifnGnhvvtrhskGfaipcvaaavaldaGtqlfspeatsglvgevfgeidefreplkavaeaa 249
+                               GfsffshsiyGGGGpG+fnGnh+vtrhskGfaipcvaaav++daGtq+fs+eats+l+g v+gei+ef++p+ ava+aa
+  JGI20197J15136_100007718 359 GFSFFSHSIYGGGGPGVFNGNHIVTRHSKGFAIPCVAAAVSIDAGTQMFSVEATSKLIGIVYGEIPEFKDPITAVAKAA 437
+                               ****************************************************************************986 PP
+
+>> JGI20197J15136_10019001  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  334.0   5.7  3.4e-103   4.7e-99      54     249 .]       1     196 [.       1     196 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 334.0 bits;  conditional E-value: 3.4e-103
+                 MCR_beta  54 ayqGlnannlvydlvkengkegtvGtvveslveraiedkvikvekklpsgyklyetkdvalwnayaaaGllaavivnvgaaraaqa 139
+                              a+qG+nann++y+lvkengk+gt+G+vv+s ve+a + +vik++ + psg+k  +t dva wnay+aa +laa+ivn+gaar aqa
+  JGI20197J15136_10019001   1 AMQGFNANNVLYSLVKENGKDGTIGSVVASTVEKAKAAGVIKEDTTWPSGFKAMKTGDVASWNAYCAACTLAATIVNCGAARGAQA 86 
+                              78************************************************************************************ PP
+
+                 MCR_beta 140 vsstllyyndlleketglpGvdfGrveGtavGfsffshsiyGGGGpGifnGnhvvtrhskGfaipcvaaavaldaGtqlfspeats 225
+                              vsstlly ndl+e+etglpG+dfG+v+GtavGfsffshsiyGGGGpG+fnGnh+vtrhskGfaipcvaaav++daGtq+fs+eats
+  JGI20197J15136_10019001  87 VSSTLLYANDLIEHETGLPGCDFGKVMGTAVGFSFFSHSIYGGGGPGVFNGNHIVTRHSKGFAIPCVAAAVSIDAGTQMFSVEATS 172
+                              ************************************************************************************** PP
+
+                 MCR_beta 226 glvgevfgeidefreplkavaeaa 249
+                              +l+g v+gei+ef++p+ ava+aa
+  JGI20197J15136_10019001 173 KLIGIVYGEIPEFKDPITAVAKAA 196
+                              *********************986 PP
+
+>> JGI20197J15136_10166061  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  260.1   5.4   1.1e-80   1.6e-76     110     249 .]       1     140 [.       1     140 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 260.1 bits;  conditional E-value: 1.1e-80
+                 MCR_beta 110 kdvalwnayaaaGllaavivnvgaaraaqavsstllyyndlleketglpGvdfGrveGtavGfsffshsiyGGGGpGifnGnhvvt 195
+                              +dva wn y+aaG+laa+ivn+gaar aqavsstlly ndl+e+et+lpG+dfG+v+GtavGfsffshsiyGGGGpG+fnGnh+vt
+  JGI20197J15136_10166061   1 DDVAAWNGYCAAGTLAATIVNCGAARGAQAVSSTLLYANDLIEHETALPGCDFGKVMGTAVGFSFFSHSIYGGGGPGVFNGNHIVT 86 
+                              599*********************************************************************************** PP
+
+                 MCR_beta 196 rhskGfaipcvaaavaldaGtqlfspeatsglvgevfgeidefreplkavaeaa 249
+                              rhskGfaipcvaaava+daGtq+fs+eats+++g v+gei+ef++p+ ava+aa
+  JGI20197J15136_10166061  87 RHSKGFAIPCVAAAVAIDAGTQMFSIEATSKIIGIVYGEIPEFKDPITAVAKAA 140
+                              ***************************************************986 PP
+
+>> JGI20197J15136_10600611  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  216.5   5.2   2.4e-67   3.3e-63     114     218 ..       1     105 []       1     105 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 216.5 bits;  conditional E-value: 2.4e-67
+                 MCR_beta 114 lwnayaaaGllaavivnvgaaraaqavsstllyyndlleketglpGvdfGrveGtavGfsffshsiyGGGGpGifnGnhvvtrhsk 199
+                              +wnay+aaG+laa++vn+g+ r aqavsstlly+nd++eket+lpG+dfGrv+GtavGfsffshsiyGGGGpG+fnGnhvvtrhs+
+  JGI20197J15136_10600611   1 KWNAYTAAGVLAATMVNCGSLRGAQAVSSTLLYFNDIIEKETALPGCDFGRVMGTAVGFSFFSHSIYGGGGPGVFNGNHVVTRHSR 86 
+                              6************************************************************************************* PP
+
+                 MCR_beta 200 GfaipcvaaavaldaGtql 218
+                              GfaipcvaaavaldaGtq+
+  JGI20197J15136_10600611  87 GFAIPCVAAAVALDAGTQM 105
+                              ******************8 PP
+
+>> JGI20197J15136_10935111  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  181.6   3.3   1.1e-56   1.5e-52     137     221 ..       2      86 .]       1      86 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 181.6 bits;  conditional E-value: 1.1e-56
+                 MCR_beta 137 aqavsstllyyndlleketglpGvdfGrveGtavGfsffshsiyGGGGpGifnGnhvvtrhskGfaipcvaaavaldaGtqlfsp 221
+                              aqavsstlly+nd++eket+lpG+dfGrv+GtavGfsffshsiyGGGGpG+fnGnhvvtrhs+GfaipcvaaavaldaGtq+f+p
+  JGI20197J15136_10935111   2 AQAVSSTLLYFNDIIEKETALPGCDFGRVMGTAVGFSFFSHSIYGGGGPGVFNGNHVVTRHSRGFAIPCVAAAVALDAGTQMFTP 86 
+                              8**********************************************************************************86 PP
+
+>> JGI20197J15136_10035622  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.1         1   1.4e+04     208     240 ..     123     153 ..     101     159 .. 0.52
+   2 !  164.4   0.8   1.9e-51   2.7e-47       1     125 [.     189     313 .]     189     313 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 1
+                 MCR_beta 208 aavaldaGtqlfspeatsglvgevfgeidefre 240
+                              a+++  aGt + s+  t +++ ++f ++d f+ 
+  JGI20197J15136_10035622 123 AGATYVAGTTTTSSALTEAII-DMF-KVDMFNA 153
+                              333334444444444444444.333.4555555 PP
+
+  == domain 2  score: 164.4 bits;  conditional E-value: 1.9e-51
+                 MCR_beta   1 GyalrnikanhvvaitkknalnaaalssileqtavfemGdavGaferahllglayqGlnannlvydlvkengkegtvGtvveslve 86 
+                              Gy+lrn+ +nhv+a+t k ++na+alssi+eq++v+emGda+G  er +l gla+qG+nann++y+lvkeng+egt+G+vv+s ve
+  JGI20197J15136_10035622 189 GYSLRNVAVNHVAAATGKRTMNASALSSIFEQAGVWEMGDAIGWNERLQLCGLAMQGFNANNVLYSLVKENGQEGTIGSVVASTVE 274
+                              9************************************************************************************* PP
+
+                 MCR_beta  87 raiedkvikvekklpsgyklyetkdvalwnayaaaGlla 125
+                              +a + +vik++ + psg+k  +t+dva wn y+aaG+la
+  JGI20197J15136_10035622 275 KAKAAGVIKEDATWPSGFKPMKTDDVAAWNGYCAAGTLA 313
+                              ************************************997 PP
+
+>> JGI20197J15136_10200852  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.2   0.1     3e-20   4.2e-16     204     248 ..       1      45 [.       1      46 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 62.2 bits;  conditional E-value: 3e-20
+                 MCR_beta 204 pcvaaavaldaGtqlfspeatsglvgevfgeidefreplkavaea 248
+                              pcvaaavaldaGtq+f+pe+tsglvg +++ei+efrep+  vaea
+  JGI20197J15136_10200852   1 PCVAAAVALDAGTQMFTPEMTSGLVGAIYSEIKEFREPIVSVAEA 45 
+                              9*****************************************986 PP
+
+>> JGI20197J15136_10695581  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.7   0.1     4e-05      0.56      72     111 ..      25      64 ..      11      86 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 4e-05
+                 MCR_beta  72 gkegtvGtvveslveraiedkvikvekklpsgyklyetkd 111
+                              + +  vGt++++++++  +d+vi+ve+  + g +   t+ 
+  JGI20197J15136_10695581  25 AADPEVGTIIAEVMDKVGKDGVITVEEGQSLGLETDYTEG 64 
+                              56678*********************98877776655555 PP
+
+>> JGI20197J15136_10398131  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.8   0.0   7.5e-05       1.1      72     110 ..      24      62 ..      11      88 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 11.8 bits;  conditional E-value: 7.5e-05
+                 MCR_beta  72 gkegtvGtvveslveraiedkvikvekklpsgyklyetk 110
+                              + +  vGt++++++++  +d+vi+ve+  + g +   t+
+  JGI20197J15136_10398131  24 AADPEVGTIIAEVMDKVGKDGVITVEEGQSLGLETDYTE 62 
+                              55678*********************9877777655555 PP
+
+>> JGI20197J15136_10278081  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.5   0.0   9.4e-05       1.3      59     120 ..      18      79 ..       7      86 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 11.5 bits;  conditional E-value: 9.4e-05
+                 MCR_beta  59 nannlvydlvkengkegtvGtvveslveraiedkvikvekklpsgyklyetkdvalwnayaa 120
+                              ++++ + ++  + + +  +G+++++++++  +d+vi+ve++ + +++    + ++    y++
+  JGI20197J15136_10278081  18 ETKEEIASVATNSAADPEIGKLIADVMDKVGKDGVITVEESKSLQFETEYVEGMQFDRGYIS 79 
+                              555566677778888999*********************99888887665665555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (249 nodes)
+Target sequences:                       140918  (17251995 residues searched)
+Passed MSV filter:                      3218  (0.022836); expected 2818.4 (0.02)
+Passed bias filter:                     2342  (0.0166196); expected 2818.4 (0.02)
+Passed Vit filter:                       157  (0.00111412); expected 140.9 (0.001)
+Passed Fwd filter:                        10  (7.09633e-05); expected 1.4 (1e-05)
+Initial search space (Z):             140918  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.64u 0.02s 00:00:00.66 Elapsed: 00:00:00.21
+# Mc/sec: 20455.94
+//
+[ok]

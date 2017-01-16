@@ -1,0 +1,62 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/Grimey/bin/Peragenome/peragenome/test/m_dir/MCR_alpha.hmm
+# target sequence database:        /Users/Grimey/bin/Peragenome/peragenome/test/f_dir/3300003783.assembled.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       MCR_alpha  [M=127]
+Accession:   PF02249.14
+Description: Methyl-coenzyme M reductase alpha subunit, C-terminal domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------           -----------
+  ------ inclusion threshold ------
+       0.38   13.6   0.1       0.38   13.6   0.1    1.0  1  Ga0007850_10051063  
+       0.51   13.2   0.2       0.75   12.6   0.2    1.4  1  Ga0007850_10205841  
+
+
+Domain annotation for each sequence (and alignments):
+>> Ga0007850_10051063  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.6   0.1   7.7e-06      0.38      76     117 ..       2      44 ..       1      53 [] 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 7.7e-06
+           MCR_alpha  76 tlledhfGGsqraa.vlaaaagistalatgnsnaGlngwylsm 117
+                         t led+fG s ++a v+ ++ gi+ + a + + aG +   +s+
+  Ga0007850_10051063   2 TFLEDRFGLSGKTAlVTGTSRGIGRSTAIALARAGADVVLMSR 44 
+                         789*****99887626677889*99999999999998887776 PP
+
+>> Ga0007850_10205841  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.6   0.2   1.5e-05      0.75      46     122 ..      59     137 ..      19     142 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 12.6 bits;  conditional E-value: 1.5e-05
+           MCR_alpha  46 lakvkatlevvkdia..tevtlyaleqyekyptlledhfGGsqraavlaaaagistalat..gnsnaGlngwylsmllhke 122
+                         l+ v +t++  +++a  t v + +le+ +++    e +f G + a +  a++g++t+l++  g++++G + +     l k+
+  Ga0007850_10205841  59 LKLVDQTTNFRDELAksTGVVTTSLENIDRFS--REAKFSGERMAILQKATSGLGTSLTAlgGSADQGATQFMKMASLGKD 137
+                         455667777777776225677889*****997..59********************9975447888998877666656555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (127 nodes)
+Target sequences:                        97581  (12224104 residues searched)
+Passed MSV filter:                      3247  (0.0332749); expected 1951.6 (0.02)
+Passed bias filter:                     2000  (0.0204958); expected 1951.6 (0.02)
+Passed Vit filter:                       120  (0.00122975); expected 97.6 (0.001)
+Passed Fwd filter:                         2  (2.04958e-05); expected 1.0 (1e-05)
+Initial search space (Z):              97581  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.30u 0.01s 00:00:00.31 Elapsed: 00:00:00.12
+# Mc/sec: 12937.18
+//
+[ok]

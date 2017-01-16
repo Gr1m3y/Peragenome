@@ -1,0 +1,98 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/Grimey/bin/Peragenome/peragenome/test/m_dir/MCR_alpha.hmm
+# target sequence database:        /Users/Grimey/bin/Peragenome/peragenome/test/f_dir/3300001453.assembled.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       MCR_alpha  [M=127]
+Accession:   PF02249.14
+Description: Methyl-coenzyme M reductase alpha subunit, C-terminal domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                -----------
+    4.3e-66  224.1   5.1      1e-65  222.8   5.1    1.7  1  JGI20197J15136_10013162  
+      7e-47  161.9   4.7    7.7e-47  161.8   4.7    1.0  1  JGI20197J15136_10867431  
+    3.5e-40  140.3   0.2    5.1e-40  139.8   0.2    1.3  1  JGI20197J15136_10161921  
+  ------ inclusion threshold ------
+       0.36   14.2   0.3       0.37   14.1   0.3    1.0  1  JGI20197J15136_10257071  
+
+
+Domain annotation for each sequence (and alignments):
+>> JGI20197J15136_10013162  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  222.8   5.1   2.9e-70     1e-65       1     127 []     322     447 ..     322     447 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 222.8 bits;  conditional E-value: 2.9e-70
+                MCR_alpha   1 dqiwlGsymsGGvGftqyataaytdnilddfvyygvdyvkdkygglakvkatlevvkdiatevtlyaleqyekyptlledhfGGsq 86 
+                              dqiwlGsymsGGvGftqyataaytdnildd++yyg dy  +kyg+   +++t++vv+d++tevtly++eqyekypt+ledhfGGsq
+  JGI20197J15136_10013162 322 DQIWLGSYMSGGVGFTQYATAAYTDNILDDYCYYGHDYA-KKYGADGAAPSTMDVVNDLGTEVTLYGIEQYEKYPTTLEDHFGGSQ 406
+                              9*************************************7.59******************************************** PP
+
+                MCR_alpha  87 raavlaaaagistalatgnsnaGlngwylsmllhkeahsrl 127
+                              ra+vlaaa+g+++++atgnsnaGl++wylsmllhk+a++rl
+  JGI20197J15136_10013162 407 RATVLAAASGVTAGIATGNSNAGLSAWYLSMLLHKDAWGRL 447
+                              ****************************************8 PP
+
+>> JGI20197J15136_10867431  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.8   4.7   2.2e-51   7.7e-47       1      90 [.       1      89 []       1      89 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 161.8 bits;  conditional E-value: 2.2e-51
+                MCR_alpha  1 dqiwlGsymsGGvGftqyataaytdnilddfvyygvdyvkdkygglakvkatlevvkdiatevtlyaleqyekyptlledhfGGsqra 88
+                             dqiwlGsymsGGvGftqyataaytdnildd++yyg dy  +kyg+   ++at++vv+d++tevtly++eqyekypt+ledhfGGsqra
+  JGI20197J15136_10867431  1 DQIWLGSYMSGGVGFTQYATAAYTDNILDDYCYYGNDYA-KKYGADGAAPATMDVVNDLGTEVTLYGIEQYEKYPTTLEDHFGGSQRA 87
+                             9*************************************7.59********************************************** PP
+
+                MCR_alpha 89 av 90
+                             +v
+  JGI20197J15136_10867431 88 TV 89
+                             98 PP
+
+>> JGI20197J15136_10161921  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.8   0.2   1.4e-44   5.1e-40      43     127 .]       1      85 [.       1      85 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 139.8 bits;  conditional E-value: 1.4e-44
+                MCR_alpha  43 ygglakvkatlevvkdiatevtlyaleqyekyptlledhfGGsqraavlaaaagistalatgnsnaGlngwylsmllhkeahsrl 127
+                              yg+  k++at++vv+d++tevtly++eqyekypt+ledhfGGsqra+vlaaa+g++ta+atgnsnaGl++wylsmllhk+a++rl
+  JGI20197J15136_10161921   1 YGADGKAPATMDVVNDLGTEVTLYGIEQYEKYPTTLEDHFGGSQRATVLAAASGVTTAIATGNSNAGLSAWYLSMLLHKDAWGRL 85 
+                              89999*******************************************************************************8 PP
+
+>> JGI20197J15136_10257071  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.1   0.3     1e-05      0.37      28      68 ..       2      48 ..       1      53 [. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 14.1 bits;  conditional E-value: 1e-05
+                MCR_alpha 28 lddfvyygvdyvkdky......gglakvkatlevvkdiatevtlyal 68
+                             l df yyg dy +  y      +g+++ k++ ++ +++a e+t y  
+  JGI20197J15136_10257071  2 LSDFGYYGNDYSSYAYfglsriSGMSNDKQSKKTYRKMALEMTNYRK 48
+                             78***********9998888888888899999999*******99965 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (127 nodes)
+Target sequences:                       140918  (17251995 residues searched)
+Passed MSV filter:                      3386  (0.0240282); expected 2818.4 (0.02)
+Passed bias filter:                     2741  (0.019451); expected 2818.4 (0.02)
+Passed Vit filter:                       189  (0.00134121); expected 140.9 (0.001)
+Passed Fwd filter:                         4  (2.83853e-05); expected 1.4 (1e-05)
+Initial search space (Z):             140918  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.41u 0.02s 00:00:00.43 Elapsed: 00:00:00.17
+# Mc/sec: 12888.26
+//
+[ok]
