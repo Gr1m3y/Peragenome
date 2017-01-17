@@ -63,15 +63,13 @@ class map_seqnm:
                 sys.exit(0)
             elif opt in ["-m", "--mapping-file"]:
                 self.mapping_file = arg
+                print(self.mapping_file)
             elif opt in ["-i", "--input"]:
                 self.fasta_dir = arg
             elif opt in ["-D", "--domain"]:
                 self.domain = arg
             elif opt in ["-r", "--range"]:
                 self.range = arg
-            elif opt in ["-m", "--mapping-file"]:
-                self.mapping_file = arg
-                print(self.mapping_file)
 
     def create_mapping(self):
         # Open the mapping file and find the correct columns
