@@ -71,6 +71,7 @@ class map_seqnm:
                 self.range = arg
             elif opt in ["-m", "--mapping-file"]:
                 self.mapping_file = arg
+                print(self.mapping_file)
 
     def create_mapping(self):
         # Open the mapping file and find the correct columns
