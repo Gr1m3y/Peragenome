@@ -35,7 +35,7 @@ import lib
 import error
 import getopt
 
-arg_string = "hD:R:m:i:"
+arg_string = "hD:r:m:i:"
 arg_list = ["help", "mapping-file=", "input=", "domain=", "range="]
 
 # TODO: Put some of these values into a file for saving which can be set
@@ -67,8 +67,10 @@ class map_seqnm:
                 self.fasta_dir = arg
             elif opt in ["-D", "--domain"]:
                 self.domain = arg
-            elif opt in ["-R", "--range"]:
+            elif opt in ["-r", "--range"]:
                 self.range = arg
+            elif opt in ["-m", "--mapping-file"]:
+                self.mapping_file = arg
 
     def create_mapping(self):
         # Open the mapping file and find the correct columns
