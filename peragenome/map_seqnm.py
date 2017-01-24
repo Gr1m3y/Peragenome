@@ -41,7 +41,7 @@ arg_list = ["help", "mapping-file=", "input=", "domain=", "range="]
 # TODO: Put some of these values into a file for saving which can be set
 class map_seqnm:
     def __init__(self, argv):
-        self.mapping_file = "test/img_taxonmap.csv"
+        self.mapping_file = "settings/img_taxonmap.csv"
         self.fasta_dir = ""
         self.domain = "taxon_oid"
         self.range = "taxon_name"
