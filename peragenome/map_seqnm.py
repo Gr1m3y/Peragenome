@@ -46,9 +46,14 @@ class map_seqnm:
         self.domain = "taxon_oid"
         self.range = "taxon_name"
         self.fasta_ext = ".faa"
-        self.recursive = False
+        self.recursive = True
         self.fasta_files = {}
         self.mapping = {}
+
+        # Set the default mapping file to be the one in the install directory
+        default_map = os.path.dirname(os.path.realpath(__file__))
+        default_map = os.path.abspath(default_map)
+        self.mapping_file = default_map + "/" + self.mapping_file
 
         # Parse arguments
         try:
@@ -91,9 +96,11 @@ class map_seqnm:
             new_file = fasta.split(".")[0]
             new_file = "%s_new%s" % (new_file, self.fasta_ext)
 
-            if self.mapping[fasta_name]:
+            if fasta_name in self.mapping:
                 cmd = "awk '/^>/{print \">%s|\" ++i; next}{print}' < %s > %s" % (self.mapping[fasta_name],
-                                                                       fasta, new_file)
+                                                                       lib.shell_quotes(fasta), 
+                                                                       lib.shell_quotes(new_file))
+                print("Executing: %s" % cmd)
                 os.system(cmd)
             else:
                 print("No mapping with that name")
