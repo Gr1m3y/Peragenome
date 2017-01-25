@@ -34,8 +34,9 @@ import os
 import lib
 import error
 import getopt
+import usage
 
-arg_string = "hD:r:m:i:"
+arg_string = "hd:r:m:i:"
 arg_list = ["help", "mapping-file=", "input=", "domain=", "range="]
 
 # TODO: Put some of these values into a file for saving which can be set
@@ -59,19 +60,19 @@ class map_seqnm:
         try:
             opts, args = getopt.getopt(argv[1:], arg_string, arg_list)
         except:
-            self.usage()
+            usage.map_seqnm()
             raise error.usageException
 
         for opt, arg in opts:
             if opt in ["-h", "--help"]:
-                self.usage()
+                usage.map_seqnm()
                 sys.exit(0)
             elif opt in ["-m", "--mapping-file"]:
                 self.mapping_file = arg
                 print(self.mapping_file)
             elif opt in ["-i", "--input"]:
                 self.fasta_dir = arg
-            elif opt in ["-D", "--domain"]:
+            elif opt in ["-d", "--domain"]:
                 self.domain = arg
             elif opt in ["-r", "--range"]:
                 self.range = arg
@@ -105,9 +106,6 @@ class map_seqnm:
             else:
                 print("No mapping with that name")
 
-
-    def usage(self):
-        print("BOOM")
 
     def main(self):
         # Find the fasta files of interest

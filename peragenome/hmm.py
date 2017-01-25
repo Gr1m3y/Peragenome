@@ -21,6 +21,7 @@ import os
 import getopt
 import error
 import lib
+import usage
 
 arg_string = "hrm:f::o:"
 arg_list = ["help", "model-dir=", "fasta-dir=", "output=", "recursive"]
@@ -52,20 +53,20 @@ class hmm:
       self.model_files = {}
 
       if len(argv) <= 1:
-         self.usage()
+         usage.hmm()
          raise error.usageException
 
       # Get arguments
       try:
          opts, args = getopt.getopt(argv[1:], arg_string, arg_list)
       except:
-         self.usage()
+         usage.hmm()
          raise error.usageException
 
       # Parse the arguments
       for opt, arg in opts:
          if opt in ["-h", "--help"]:
-            self.usage()
+            usage.hmm()
             sys.exit(0)
          
          # Sets the working directories
@@ -89,24 +90,6 @@ class hmm:
       print(self.fasta_dir)
       print(self.model_dir)
       lib.continue_prompt()
-
-
-   def usage(self):
-      print("NAME")
-      print("\tPeragenome: hmm -- search multiple fasta files with many HMMs")
-      print()
-      print("SYNOPSIS")
-      print("\tperagenome hmm [-hr] [-t <x>] [-e <s>] [-o " + lib.colour.UNDERLINE 
-         + "output_directory" + lib.colour.END + "] -f " + lib.colour.UNDERLINE 
-         + "fasta_directory" + lib.colour.END + " -m " + lib.colour.UNDERLINE 
-         + "hmm_directory" + lib.colour.END + "\n")
-      print("DESCRIPTION")
-      print("\tIdentifies HMM files and FASTA files in the appropriate input destinations, then")
-      print("\truns all HMMs in a pairwise fashion using hmmer. Resulting HMM files are created")
-      print("\tin a new directory.\n")
-      print("\tThe following options are available:")
-      print()
-      print("\t-h\tPrints help info")
 
    # build_output_dir: ->
    # Summary:
