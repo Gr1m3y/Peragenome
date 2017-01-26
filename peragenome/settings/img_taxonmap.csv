@@ -8681,3 +8681,5 @@ taxon_oid,domain,taxon_name
 2614208546,Eukaryota,Spirodela polyrhiza 7498
 2614208549,Eukaryota,Selaginella moellendorffii
 2681812918,Eukaryota,C. Glomeribacter gigasporarum Genome Extracted from a Metagenome
+hug_000000,*Microbiome,Jamaican Landfill Leachate(Hug)
+hug_000001,*Microbiome,Jamaican Landfill River(Hug)
