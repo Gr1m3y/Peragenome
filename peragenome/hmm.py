@@ -23,7 +23,7 @@ import error
 import lib
 import usage
 
-arg_string = "hrm:f::o:"
+arg_string = "hrm:f::o:e:"
 arg_list = ["help", "model-dir=", "fasta-dir=", "output=", "recursive"]
 
 # hmm
@@ -68,7 +68,6 @@ class hmm:
          if opt in ["-h", "--help"]:
             usage.hmm()
             sys.exit(0)
-         
          # Sets the working directories
          elif opt in ["-m", "--model-dir"]:
             self.model_dir = os.path.abspath(arg)
@@ -82,6 +81,9 @@ class hmm:
                raise error.badArgument
          elif opt in ["-o", "--output"]:
             self.output_dir = arg
+         # Set e-value to be used by hmmsearch
+         elif opt in ["-e"]:
+            self.threshold = arg
          
          # Other options
          elif opt in ["-r", "--recursive"]:
